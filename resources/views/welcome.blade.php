@@ -24,13 +24,9 @@
                 <h1>LikaProgramming</h1>
                 <div class="box-laravel">
                     <span>Laravel Version: <b>{{ app()->version() }}</b> </span>
-                </div>
-                <div class="box-php">
                     <span>PHP Version: <b>{{ PHP_VERSION }}</b> </span>
-                </div>
-                <div class="box-memory">
-                    <span>Current Usage: <b>{{ round(memory_get_usage() / 1024 / 1024, 2) }} MB</b> </span>
-                    <span>Peak Usage: <b>{{ round(memory_get_peak_usage() / 1024 / 1024, 2) }} MB</b> </span>
+                    <span>Current Memory Usage: <b>{{ round(memory_get_usage() / 1024 / 1024, 2) }} MB</b> </span>
+                    <span>Peak Memory Usage: <b>{{ round(memory_get_peak_usage() / 1024 / 1024, 2) }} MB</b> </span>
                     <span>Duration: <b> {{ round((microtime(true) - LARAVEL_START) * 1000, 2) }} ms</b> </span>
                 </div>
             </div>

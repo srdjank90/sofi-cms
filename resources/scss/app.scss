@@ -17,62 +17,17 @@ html, body {
     flex-direction: column;
     gap: 20px;
     height: 100vh;
+    letter-spacing: -2px;
+    font-family: "Fira Code", monospace;
+    .box-laravel {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
     h1{
         font-size: 64px;
-        font-family: "Montserrat", sans-serif;
     }
 }
 
-.box-memory {
-    width: 400px;
-    height: 120px;
-    background-color: #86a8cf;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    font-family: "Roboto Condensed", sans-serif;
-    font-family: 'Fira Code',monospace;
-    letter-spacing: -2px;
-    font-size: 16px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3), /* larger, more visible shadow */
-              0 3px 6px rgba(0, 0, 0, 0.2); /* secondary shadow for added depth */
-}
-
-.box-php {
-    width: 400px;
-    height: 60px;
-    background-color: #b51a2b;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    font-family: "Roboto Condensed", sans-serif;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3), /* larger, more visible shadow */
-              0 3px 6px rgba(0, 0, 0, 0.2); /* secondary shadow for added depth */
-}
-
-.box-laravel {
-    width: 400px;
-    height: 60px;
-    background-color: #638ecb;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    font-family: "Roboto Condensed", sans-serif;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3), /* larger, more visible shadow */
-              0 3px 6px rgba(0, 0, 0, 0.2); /* secondary shadow for added depth */
-}
