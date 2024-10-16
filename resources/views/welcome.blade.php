@@ -4,12 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -22,12 +19,24 @@
         <div class="row">
             <div class="col-12 centered">
                 <h1>LikaProgramming</h1>
-                <div class="box-laravel">
+                <button id="mic-button">
+                    Start Listening
+                    <ion-icon name="mic" class="ms-1"></ion-icon>
+                </button>
+                <code id="code">
+
+                </code>
+                <div id="info-container" class="box-laravel d-none">
                     <span>Laravel Version: <b>{{ app()->version() }}</b> </span>
                     <span>PHP Version: <b>{{ PHP_VERSION }}</b> </span>
                     <span>Current Memory Usage: <b>{{ round(memory_get_usage() / 1024 / 1024, 2) }} MB</b> </span>
                     <span>Peak Memory Usage: <b>{{ round(memory_get_peak_usage() / 1024 / 1024, 2) }} MB</b> </span>
                     <span>Duration: <b> {{ round((microtime(true) - LARAVEL_START) * 1000, 2) }} ms</b> </span>
+                    <span class="d-flex align-items-center">Page Loading: <span id="page-loader"
+                            class="loader"></span><b id="loading-time"></b>
+                    </span>
+                    <span>Current temperature in <span id="city"></span> is: <b id="temperature"></b> </span>
+                    <div id="quote" class="text-center mt-3"></div>
                 </div>
             </div>
         </div>
