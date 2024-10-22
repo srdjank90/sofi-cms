@@ -9,15 +9,7 @@ document.getElementById("mic-button").addEventListener("click", function () {
 
         recognition.onresult = (event) => {
             const transcript = event.results[0][0].transcript.toLowerCase();
-
-            if (transcript.includes("info")) {
-                document
-                    .getElementById("info-container")
-                    .classList.remove("d-none");
-            } else {
-                document.getElementById("code").innerHTML =
-                    "That is not magic word ;)";
-            }
+            document.getElementById("code").innerHTML = transcript;
         };
 
         recognition.onerror = (event) => {

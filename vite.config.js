@@ -10,6 +10,11 @@ export default defineConfig({
         }),
     ],
     css: {
+        preprocessorOptions: {
+            scss: {
+                api: "modern-compiler", // or "modern"
+            },
+        },
         postcss: {
             plugins: [
                 autoprefixer(), // Use Autoprefixer in PostCSS

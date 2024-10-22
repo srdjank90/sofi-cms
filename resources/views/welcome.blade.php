@@ -16,31 +16,31 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-12 centered">
-                <h1>LikaProgramming</h1>
-                <button id="mic-button">
-                    Start Listening
-                    <ion-icon name="mic" class="ms-1"></ion-icon>
-                </button>
-                <code id="code">
+        <div class="centered">
+            <h1>LikaProgramming</h1>
+            <button id="mic-button">
+                Start Listening
+                <ion-icon name="mic" class="ms-1"></ion-icon>
+            </button>
+            <button>Show Modal</button>
+            <code id="code">
 
-                </code>
-                <div id="info-container" class="box-laravel d-none">
-                    <span>Laravel Version: <b>{{ app()->version() }}</b> </span>
-                    <span>PHP Version: <b>{{ PHP_VERSION }}</b> </span>
-                    <span>Current Memory Usage: <b>{{ round(memory_get_usage() / 1024 / 1024, 2) }} MB</b> </span>
-                    <span>Peak Memory Usage: <b>{{ round(memory_get_peak_usage() / 1024 / 1024, 2) }} MB</b> </span>
-                    <span>Duration: <b> {{ round((microtime(true) - LARAVEL_START) * 1000, 2) }} ms</b> </span>
-                    <span class="d-flex align-items-center">Page Loading: <span id="page-loader"
-                            class="loader"></span><b id="loading-time"></b>
-                    </span>
-                    <span>Current temperature in <span id="city"></span> is: <b id="temperature"></b> </span>
-                    <div id="quote" class="text-center mt-3"></div>
-                </div>
+            </code>
+            <div id="info-container" class="box-laravel">
+                <span>Laravel Version: <b>{{ app()->version() }}</b> </span>
+                <span>PHP Version: <b>{{ PHP_VERSION }}</b> </span>
+                <span>Current Memory Usage: <b>{{ round(memory_get_usage() / 1024 / 1024, 2) }} MB</b> </span>
+                <span>Peak Memory Usage: <b>{{ round(memory_get_peak_usage() / 1024 / 1024, 2) }} MB</b> </span>
+                <span>Duration: <b> {{ round((microtime(true) - LARAVEL_START) * 1000, 2) }} ms</b> </span>
+                <span>Page Loading: <span id="page-loader" class="loader"></span><b id="loading-time"></b>
+                </span>
+                <span>Current temperature in <span id="city"></span> is: <b id="temperature"></b> </span>
+                <div id="quote" class="quote"></div>
             </div>
         </div>
+
     </div>
+
 </body>
 
 </html>
